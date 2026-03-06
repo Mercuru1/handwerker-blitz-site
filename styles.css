@@ -212,7 +212,35 @@ p { margin: 0 0 1rem; color: var(--muted); }
   border: 1px solid transparent;
 }
 .btn:hover,
-.btn:focus-visible { transform: translateY(-1px); }
+.btn:focus-visible { transform: translateY(-2px); }
+.theme-toggle:hover,
+.nav-toggle:hover,
+.lang-btn:hover,
+.lang-btn:focus-visible {
+  transform: translateY(-1px);
+}
+.card:hover {
+  border-color: color-mix(in srgb, var(--primary) 18%, var(--border));
+}
+.hero-card:hover,
+.services-grid .card:hover,
+.steps-grid .card:hover,
+.reviews-grid .card:hover,
+.contact-grid .card:hover,
+.notice-grid .card:hover,
+.legal-grid .card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 40px rgba(12, 11, 39, 0.12);
+}
+.hero-card,
+.services-grid .card,
+.steps-grid .card,
+.reviews-grid .card,
+.contact-grid .card,
+.notice-grid .card,
+.legal-grid .card {
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+}
 .btn-primary {
   color: white;
   background: linear-gradient(135deg, var(--primary), var(--accent));
@@ -365,12 +393,22 @@ p { margin: 0 0 1rem; color: var(--muted); }
   overflow: hidden;
   padding: 0;
   cursor: pointer;
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+}
+.portfolio-card:hover,
+.portfolio-card:focus-visible {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 44px rgba(12, 11, 39, 0.14);
+  border-color: color-mix(in srgb, var(--accent) 24%, var(--border));
 }
 .portfolio-card .thumbs {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 0.3rem;
   padding: 0.3rem;
+}
+.portfolio-card .thumbs.single {
+  grid-template-columns: 1fr;
 }
 .portfolio-card figure {
   margin: 0;
@@ -383,6 +421,12 @@ p { margin: 0 0 1rem; color: var(--muted); }
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 260ms ease, filter 260ms ease;
+}
+.portfolio-card:hover img,
+.portfolio-card:focus-visible img {
+  transform: scale(1.03);
+  filter: saturate(1.04);
 }
 .portfolio-body {
   padding: 1rem 1rem 1.15rem;
@@ -509,6 +553,9 @@ p { margin: 0 0 1rem; color: var(--muted); }
   border-radius: var(--radius-sm);
   overflow: hidden;
   border: 1px solid var(--border);
+}
+.modal-images figure.single-span {
+  grid-column: 1 / -1;
 }
 .modal-images img {
   width: 100%;
