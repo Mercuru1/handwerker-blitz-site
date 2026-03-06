@@ -54,7 +54,7 @@ const i18n = {
     privacyP3: 'Der Hosting-Anbieter kann technisch notwendige Server-Logfiles verarbeiten. Als Hosting kann zum Beispiel GitHub Pages verwendet werden. Diese Angabe kann bei Bedarf angepasst werden.',
     privacyP4: 'Externe Links zu WhatsApp, Google Maps oder einem späteren Google-Unternehmensprofil führen zu Diensten Dritter. Dort gelten die Datenschutzbestimmungen der jeweiligen Anbieter.',
     privacyP5: 'Wenn Sie uns per Telefon, WhatsApp oder E-Mail kontaktieren, erfolgt die Verarbeitung Ihrer Angaben ausschließlich zur Bearbeitung Ihrer Anfrage.',
-    modalAltBefore: 'Vorher-Bild', modalAltAfter: 'Nachher-Bild', portfolioEmpty: 'Keine Einträge in dieser Kategorie.'
+    modalAltBefore: 'Vorher-Bild', modalAltAfter: 'Nachher-Bild', portfolioEmpty: 'Keine Einträge in dieser Kategorie.', detailLabel: 'Detail', galleryLabel: 'Projektbild'
   },
   ru: {
     brandTag: 'Аккуратно. Вовремя. Надёжно.',
@@ -111,7 +111,7 @@ const i18n = {
     privacyP3: 'Хостинг-провайдер может технически обрабатывать серверные лог-файлы. В качестве хостинга, например, может использоваться GitHub Pages. При необходимости этот текст можно изменить.',
     privacyP4: 'Внешние ссылки на WhatsApp, Google Maps или будущий профиль компании в Google ведут к сторонним сервисам. Там действуют правила конфиденциальности соответствующих провайдеров.',
     privacyP5: 'Если вы связываетесь с нами по телефону, через WhatsApp или по e-mail, ваши данные используются только для обработки вашего запроса.',
-    modalAltBefore: 'Изображение до', modalAltAfter: 'Изображение после', portfolioEmpty: 'В этой категории пока нет записей.'
+    modalAltBefore: 'Изображение до', modalAltAfter: 'Изображение после', portfolioEmpty: 'В этой категории пока нет записей.', detailLabel: 'Деталь', galleryLabel: 'Фото проекта'
   },
   en: {
     brandTag: 'Clean. On time. Reliable.',
@@ -168,7 +168,7 @@ const i18n = {
     privacyP3: 'The hosting provider may technically process server log files required for operation. Hosting may for example be provided via GitHub Pages. This wording can be adjusted if needed.',
     privacyP4: 'External links to WhatsApp, Google Maps or a future Google Business Profile lead to third-party services. Their privacy policies apply there.',
     privacyP5: 'If you contact us by phone, WhatsApp or e-mail, your details are processed only to handle your request.',
-    modalAltBefore: 'Before image', modalAltAfter: 'After image', portfolioEmpty: 'No items in this category yet.'
+    modalAltBefore: 'Before image', modalAltAfter: 'After image', portfolioEmpty: 'No items in this category yet.', detailLabel: 'Detail', galleryLabel: 'Project image'
   }
 };
 
@@ -241,11 +241,22 @@ function createPortfolioCard(item, index) {
   article.tabIndex = 0;
   article.setAttribute('role', 'button');
   article.setAttribute('aria-label', `${item.title}, ${item.city}`);
-  article.innerHTML = `
-    <div class="thumbs">
-      <figure><img src="${item.beforeImage}" alt="${i18n[state.lang].beforeLabel}: ${item.title}" loading="lazy" decoding="async"></figure>
-      <figure><img src="${item.afterImage}" alt="${i18n[state.lang].afterLabel}: ${item.title}" loading="lazy" decoding="async"></figure>
-    </div>
+
+  const isSingle = Boolean(item.singleImage);
+  const thumbsMarkup = isSingle
+    ? `
+      <div class="thumbs single">
+        <figure><img src="${item.singleImage}" alt="${i18n[state.lang].galleryLabel}: ${item.title}" loading="lazy" decoding="async"></figure>
+      </div>
+    `
+    : `
+      <div class="thumbs compare">
+        <figure><img src="${item.beforeImage}" alt="${i18n[state.lang].beforeLabel}: ${item.title}" loading="lazy" decoding="async"></figure>
+        <figure><img src="${item.afterImage}" alt="${i18n[state.lang].afterLabel}: ${item.title}" loading="lazy" decoding="async"></figure>
+      </div>
+    `;
+
+  article.innerHTML = `${thumbsMarkup}
     <div class="portfolio-body">
       <div class="portfolio-meta"><strong>${item.category}</strong><span>${item.city}</span></div>
       <h3>${item.title}</h3>
@@ -287,10 +298,29 @@ function openModal(item) {
   els.modalCategory.textContent = item.category;
   els.modalMeta.textContent = item.city;
   els.modalDescription.textContent = item.description[state.lang];
-  els.modalBefore.src = item.beforeImage;
-  els.modalAfter.src = item.afterImage;
-  els.modalBefore.alt = `${i18n[state.lang].modalAltBefore}: ${item.title}`;
-  els.modalAfter.alt = `${i18n[state.lang].modalAltAfter}: ${item.title}`;
+
+  const figures = els.modal.querySelectorAll('.modal-images figure');
+  const captions = els.modal.querySelectorAll('.modal-images figcaption');
+
+  if (item.singleImage) {
+    els.modalBefore.src = item.singleImage;
+    els.modalBefore.alt = `${i18n[state.lang].galleryLabel}: ${item.title}`;
+    els.modalAfter.removeAttribute('src');
+    els.modalAfter.alt = '';
+    if (captions[0]) captions[0].textContent = i18n[state.lang].detailLabel;
+    if (figures[0]) figures[0].classList.add('single-span');
+    if (figures[1]) figures[1].hidden = true;
+  } else {
+    els.modalBefore.src = item.beforeImage;
+    els.modalAfter.src = item.afterImage;
+    els.modalBefore.alt = `${i18n[state.lang].modalAltBefore}: ${item.title}`;
+    els.modalAfter.alt = `${i18n[state.lang].modalAltAfter}: ${item.title}`;
+    if (captions[0]) captions[0].textContent = i18n[state.lang].beforeLabel;
+    if (captions[1]) captions[1].textContent = i18n[state.lang].afterLabel;
+    if (figures[0]) figures[0].classList.remove('single-span');
+    if (figures[1]) figures[1].hidden = false;
+  }
+
   els.modal.setAttribute('aria-hidden', 'false');
   document.body.style.overflow = 'hidden';
   els.modalClose.focus();
