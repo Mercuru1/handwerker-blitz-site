@@ -10,8 +10,8 @@
   <meta property="og:description" content="Moderner, zuverlässiger Handwerker-Service in Krefeld, Viersen und Umgebung." />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="de_DE" />
-  <meta property="og:image" content="favicon.svg" />
-  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta property="og:image" content="images/branding/logo-full.png" />
+  <link rel="icon" type="image/png" href="images/branding/logo-icon.png" />
   <link rel="preload" href="styles.css" as="style" />
   <link rel="stylesheet" href="styles.css" />
   <script>
@@ -25,11 +25,14 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Zum Inhalt springen</a>
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
 
   <header class="site-header" id="top">
     <div class="container header-inner">
       <a href="#top" class="brand" aria-label="Handwerker & Blitz Startseite">
-        <span class="brand-mark" aria-hidden="true">HB</span>
+        <span class="brand-mark logo-wrap" aria-hidden="true">
+          <img src="images/branding/logo-icon.png" alt="" class="brand-logo">
+        </span>
         <span class="brand-text">
           <strong>Handwerker & Blitz</strong>
           <span data-i18n="brandTag">Sauber. Pünktlich. Zuverlässig.</span>
@@ -89,7 +92,10 @@
           </div>
         </div>
 
-        <aside class="hero-card" aria-label="Kontaktinformationen">
+                <aside class="hero-card hero-showcase" aria-label="Kontaktinformationen">
+          <div class="hero-logo-panel">
+            <img src="images/branding/logo-full.png" alt="Handwerker & Blitz Logo" class="hero-logo-image">
+          </div>
           <div class="stat-card">
             <p class="stat-label" data-i18n="contactFastLabel">Schnell erreichbar</p>
             <a class="stat-value" href="https://wa.me/491722821304" target="_blank" rel="noopener noreferrer">WhatsApp</a>

@@ -93,12 +93,18 @@ p { margin: 0 0 1rem; color: var(--muted); }
 .site-header {
   position: sticky;
   top: 0;
+  backdrop-filter: blur(14px);
+  z-index: 50;
+  position: sticky;
+  top: 0;
   z-index: 1000;
   backdrop-filter: blur(14px);
   background: color-mix(in srgb, var(--bg) 78%, transparent);
   border-bottom: 1px solid var(--border);
 }
 .header-inner {
+  position: relative;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -613,7 +619,9 @@ p { margin: 0 0 1rem; color: var(--muted); }
     display: none;
   }
   .site-nav.open { display: flex; }
-  .header-inner { flex-wrap: wrap; padding: 0.8rem 0; }
+  .header-inner {
+  position: relative;
+  z-index: 1; flex-wrap: wrap; padding: 0.8rem 0; }
   .header-actions { margin-left: auto; }
   .header-cta { display: none; }
 }
@@ -654,4 +662,35 @@ p { margin: 0 0 1rem; color: var(--muted); }
     opacity: 1;
     transform: none;
   }
+  .cursor-glow { display: none !important; }
 }
+
+
+.hero-showcase { align-content: start; }
+.hero-logo-panel {
+  border: 1px solid var(--border);
+  background: linear-gradient(135deg, rgba(8,7,31,.96), rgba(51,49,198,.92));
+  border-radius: var(--radius);
+  padding: 1rem;
+  overflow: hidden;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.08);
+}
+.hero-logo-image { width: 100%; height: auto; display: block; border-radius: calc(var(--radius) - 8px); }
+.btn, .lang-btn, .theme-toggle, .nav-toggle, .site-nav a, .filter-btn, .card, .stat-card, .brand {
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease, background-color 220ms ease, color 220ms ease, opacity 220ms ease;
+}
+.btn:hover, .btn:focus-visible, .theme-toggle:hover, .lang-btn:hover, .site-nav a:hover, .filter-btn:hover, .brand:hover {
+  transform: translateY(-2px);
+}
+.card:hover, .stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(12, 11, 39, 0.14);
+}
+.site-nav a { position: relative; }
+.site-nav a::after {
+  content: ""; position: absolute; left: 0; bottom: -0.3rem; width: 100%; height: 2px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  transform: scaleX(0); transform-origin: left; transition: transform 180ms ease;
+}
+.site-nav a:hover::after, .site-nav a:focus-visible::after { transform: scaleX(1); }
+.portfolio-card .thumbs.single figure { aspect-ratio: 4/3; }

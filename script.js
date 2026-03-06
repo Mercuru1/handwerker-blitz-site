@@ -194,7 +194,8 @@ const els = {
   modalDescription: document.getElementById('modalDescription'),
   modalBefore: document.getElementById('modalBefore'),
   modalAfter: document.getElementById('modalAfter'),
-  year: document.getElementById('year')
+  year: document.getElementById('year'),
+  cursorGlow: document.getElementById('cursorGlow')
 };
 
 function applyTranslations(lang) {
@@ -401,6 +402,33 @@ function initThemeToggle() {
   els.themeToggle?.addEventListener('click', toggleTheme);
 }
 
+function initCursorGlow() {
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const finePointer = window.matchMedia('(pointer: fine)').matches;
+  if (!els.cursorGlow || prefersReduced || !finePointer) return;
+
+  let rafId = null;
+  let x = window.innerWidth / 2;
+  let y = window.innerHeight / 3;
+
+  const paint = () => {
+    els.cursorGlow.style.left = `${x}px`;
+    els.cursorGlow.style.top = `${y}px`;
+    rafId = null;
+  };
+
+  const update = event => {
+    x = event.clientX;
+    y = event.clientY;
+    document.body.classList.add('pointer-active');
+    if (!rafId) rafId = requestAnimationFrame(paint);
+  };
+
+  window.addEventListener('pointermove', update, { passive: true });
+  window.addEventListener('pointerdown', update, { passive: true });
+  document.addEventListener('mouseleave', () => document.body.classList.remove('pointer-active'));
+}
+
 function init() {
   applyTranslations(state.lang);
   setTheme(state.theme);
@@ -411,6 +439,7 @@ function init() {
   initModal();
   initReveal();
   initNav();
+  initCursorGlow();
   loadPortfolio();
 }
 
