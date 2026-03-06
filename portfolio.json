@@ -6,9 +6,21 @@
     "beforeImage": "images/portfolio/tueren-leisten-tuer-krefeld-01-before.jpg",
     "afterImage": "images/portfolio/tueren-leisten-tuer-krefeld-02-after.jpg",
     "description": {
-      "de": "Tür vorbereitet und sauber weiß gestrichen.",
-      "ru": "Дверь подготовлена и аккуратно покрашена в белый цвет.",
-      "en": "Door prepared and neatly painted white."
+      "de": "Innentür vorbereitet und sauber weiß gestrichen.",
+      "ru": "Внутренняя дверь подготовлена и аккуратно покрашена в белый цвет.",
+      "en": "Interior door prepared and neatly painted white."
+    }
+  },
+  {
+    "title": "Eingangstür grün lackiert",
+    "category": "Türen & Leisten",
+    "city": "Krefeld",
+    "beforeImage": "images/portfolio/tueren-leisten-eingangstuer-gruen-krefeld-01-before.jpg",
+    "afterImage": "images/portfolio/tueren-leisten-eingangstuer-gruen-krefeld-02-after.jpg",
+    "description": {
+      "de": "Eingangstür von abgenutzter grauer Oberfläche zu sauber lackierter grüner Ausführung aufgearbeitet.",
+      "ru": "Входная дверь обновлена: вместо потёртой серой поверхности — аккуратная зелёная покраска.",
+      "en": "Front door refreshed from a worn grey finish to a clean green painted result."
     }
   },
   {
@@ -24,6 +36,29 @@
     }
   },
   {
+    "title": "Treppe – Detail unten",
+    "category": "Montage",
+    "city": "Krefeld",
+    "beforeImage": "images/portfolio/montage-treppe-renovierung-krefeld-08-before-steps.jpg",
+    "afterImage": "images/portfolio/montage-treppe-renovierung-krefeld-09-after-angle.jpg",
+    "description": {
+      "de": "Zusätzlicher Vorher/Nachher-Blick auf die unteren Stufen und die aufgearbeitete Oberfläche.",
+      "ru": "Дополнительный ракурс до/после: нижние ступени и уже обновлённая поверхность.",
+      "en": "Additional before/after view of the lower steps and the refinished surface."
+    }
+  },
+  {
+    "title": "Treppe – Ansicht von oben",
+    "category": "Montage",
+    "city": "Krefeld",
+    "singleImage": "images/portfolio/montage-treppe-renovierung-krefeld-10-after-topview.jpg",
+    "description": {
+      "de": "Detailansicht der fertigen Treppe von oben.",
+      "ru": "Детальный вид готовой лестницы сверху.",
+      "en": "Top view detail of the finished staircase."
+    }
+  },
+  {
     "title": "Zimmer renoviert",
     "category": "Reparaturen",
     "city": "Krefeld",
@@ -36,11 +71,66 @@
     }
   },
   {
+    "title": "Akzentwand repariert",
+    "category": "Reparaturen",
+    "city": "Krefeld",
+    "beforeImage": "images/portfolio/reparaturen-akzentwand-krefeld-01-before.jpg",
+    "afterImage": "images/portfolio/reparaturen-akzentwand-krefeld-02-after.jpg",
+    "description": {
+      "de": "Beschädigte Wand vorbereitet, ausgebessert und als saubere Akzentwand neu gestaltet.",
+      "ru": "Повреждённая стена подготовлена, заделана и оформлена как аккуратная акцентная стена.",
+      "en": "Damaged wall prepared, repaired and redesigned as a clean accent wall."
+    }
+  },
+  {
+    "title": "Laminat & Raumansicht",
+    "category": "Boden",
+    "city": "Krefeld",
+    "singleImage": "images/portfolio/boden-akzentwand-laminat-krefeld-01-after.jpg",
+    "description": {
+      "de": "Gesamtansicht mit verlegtem Laminat, sauberem Abschluss und frisch gestalteter Wand.",
+      "ru": "Общий вид с уложенным ламинатом, аккуратными стыками и обновлённой стеной.",
+      "en": "Overall view with installed laminate, clean finishing and refreshed wall design."
+    }
+  },
+  {
+    "title": "Sockelleiste – Außenecke",
+    "category": "Boden",
+    "city": "Krefeld",
+    "singleImage": "images/portfolio/boden-sockelleiste-aussenecke-krefeld-01-detail.jpg",
+    "description": {
+      "de": "Detailfoto einer sauber montierten Außenecke an der Sockelleiste.",
+      "ru": "Деталь: аккуратно выполненный наружный угол плинтуса.",
+      "en": "Detail photo of a neatly finished outside skirting corner."
+    }
+  },
+  {
+    "title": "Sockelleiste – Innenecke",
+    "category": "Boden",
+    "city": "Krefeld",
+    "singleImage": "images/portfolio/boden-sockelleiste-innenecke-krefeld-01-detail.jpg",
+    "description": {
+      "de": "Detailfoto einer sauberen Innenecke mit passender Gehrung an der Sockelleiste.",
+      "ru": "Деталь: аккуратный внутренний угол плинтуса с хорошей подрезкой.",
+      "en": "Detail photo of a clean inside skirting corner with neat mitre work."
+    }
+  },
+  {
+    "title": "Laminat – Abschlussprofil",
+    "category": "Boden",
+    "city": "Krefeld",
+    "singleImage": "images/portfolio/boden-abschlussprofil-laminat-krefeld-01-detail.jpg",
+    "description": {
+      "de": "Sauber montiertes Abschlussprofil als ordentlicher Übergang am Laminat.",
+      "ru": "Аккуратно установленный профиль перехода для ламината.",
+      "en": "Neatly installed finishing profile for a clean laminate transition."
+    }
+  },
+  {
     "title": "Holzschuppen außen",
     "category": "Garten",
     "city": "Krefeld",
-    "beforeImage": "images/portfolio/garten-holzschuppen-krefeld-01-after.jpg",
-    "afterImage": "images/portfolio/garten-holzschuppen-krefeld-01-after.jpg",
+    "singleImage": "images/portfolio/garten-holzschuppen-krefeld-01-after.jpg",
     "description": {
       "de": "Außenansicht eines Holzschuppens oder Gartenprojekts.",
       "ru": "Внешний вид деревянного сарая или садового проекта.",
