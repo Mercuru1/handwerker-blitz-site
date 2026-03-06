@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="light dark" />
+  <title>Handwerker & Blitz | Handwerker-Service in Krefeld, Viersen & Umgebung</title>
+  <meta name="description" content="Handwerker & Blitz – moderner Handwerker-Service für Möbelmontage, Boden, Türen, Leisten, Küche, Garten und Reparaturen in Krefeld, Viersen, Mönchengladbach, Düsseldorf und Umgebung." />
+  <meta property="og:title" content="Handwerker & Blitz" />
+  <meta property="og:description" content="Moderner, zuverlässiger Handwerker-Service in Krefeld, Viersen und Umgebung." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="de_DE" />
+  <meta property="og:image" content="favicon.svg" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preload" href="styles.css" as="style" />
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    (() => {
+      const stored = localStorage.getItem('hb-theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const theme = stored || (prefersDark ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a href="#top" class="brand" aria-label="Handwerker & Blitz Startseite">
+        <span class="brand-mark" aria-hidden="true">HB</span>
+        <span class="brand-text">
+          <strong>Handwerker & Blitz</strong>
+          <span data-i18n="brandTag">Sauber. Pünktlich. Zuverlässig.</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Menü öffnen">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="site-nav" id="siteNav" aria-label="Hauptnavigation">
+        <a href="#services" data-i18n="navServices">Leistungen</a>
+        <a href="#process" data-i18n="navProcess">Ablauf</a>
+        <a href="#portfolio" data-i18n="navPortfolio">Portfolio</a>
+        <a href="#reviews" data-i18n="navReviews">Bewertungen</a>
+        <a href="#faq" data-i18n="navFaq">FAQ</a>
+        <a href="#contact" data-i18n="navContact">Kontakt</a>
+        <a href="#legal" data-i18n="navLegal">Rechtliches</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="lang-switcher" role="group" aria-label="Sprache wählen">
+          <button class="lang-btn active" data-lang="de" aria-pressed="true">DE</button>
+          <button class="lang-btn" data-lang="ru" aria-pressed="false">RU</button>
+          <button class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Design umschalten">
+          <span class="theme-icon" aria-hidden="true">◐</span>
+        </button>
+
+        <a class="btn btn-primary header-cta" href="https://wa.me/491722821304" target="_blank" rel="noopener noreferrer" data-i18n="ctaWhatsapp">WhatsApp schreiben</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero section reveal">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow" data-i18n="heroEyebrow">Handwerker-Service in Krefeld & Umgebung</p>
+          <h1 data-i18n="heroTitle">Zuverlässige Hilfe für Montage, Boden, Möbel, Türen, Garten und kleine Reparaturen</h1>
+          <p class="hero-text" data-i18n="heroText">Modern, sauber und ehrlich organisiert. Sie schicken Fotos oder ein kurzes Video, wir geben Ihnen eine klare Einschätzung und finden schnell einen passenden Termin.</p>
+          <ul class="hero-points" aria-label="Vorteile">
+            <li data-i18n="heroPoint1">Transparente Einschätzung vorab</li>
+            <li data-i18n="heroPoint2">Schnelle Kommunikation per WhatsApp</li>
+            <li data-i18n="heroPoint3">Einsatzgebiet bis ca. 50 km</li>
+          </ul>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://wa.me/491722821304" target="_blank" rel="noopener noreferrer" data-i18n="ctaWhatsapp">WhatsApp schreiben</a>
+            <a class="btn btn-secondary" href="tel:+491722821304" data-i18n="ctaCall">Anrufen</a>
+            <a class="btn btn-secondary" href="mailto:olehkuripko@gmail.com" data-i18n="ctaEmail">E-Mail senden</a>
+          </div>
+          <div class="hero-meta">
+            <p><strong data-i18n="hoursLabel">Arbeitszeiten:</strong> <span data-i18n="workingHours">Mo–Sa: 08:00–19:00 · So: nach Absprache</span></p>
+            <p><strong data-i18n="areaLabel">Einsatzgebiet:</strong> <span data-i18n="serviceArea">Viersen, Krefeld, Mönchengladbach, Düsseldorf + ca. 50 km Umkreis. Weitere Strecken nach Absprache.</span></p>
+          </div>
+        </div>
+
+        <aside class="hero-card" aria-label="Kontaktinformationen">
+          <div class="stat-card">
+            <p class="stat-label" data-i18n="contactFastLabel">Schnell erreichbar</p>
+            <a class="stat-value" href="https://wa.me/491722821304" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            <p class="stat-sub">+49 172 2821304</p>
+          </div>
+          <div class="stat-card">
+            <p class="stat-label" data-i18n="contactMailLabel">E-Mail</p>
+            <a class="stat-value small" href="mailto:olehkuripko@gmail.com">olehkuripko@gmail.com</a>
+          </div>
+          <div class="stat-card">
+            <p class="stat-label" data-i18n="contactAddressLabel">Standort</p>
+            <p class="stat-value small">Krefeld</p>
+            <p class="stat-sub">Moerser Landstraße 204c</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section reveal" id="services">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow" data-i18n="servicesEyebrow">Leistungen</p>
+          <h2 data-i18n="servicesTitle">Klare Leistungen ohne leere Versprechen</h2>
+          <p data-i18n="servicesIntro">Wir konzentrieren uns auf praktische Arbeiten rund um Wohnung, Haus und Grundstück – sauber geplant und realistisch eingeschätzt.</p>
+        </div>
+
+        <div class="services-grid">
+          <article class="card service-card">
+            <h3 data-i18n="service1Title">Möbel & Innenmontage</h3>
+            <ul>
+              <li data-i18n="service1Item1">Schränke, Kommoden, Regale, Betten</li>
+              <li data-i18n="service1Item2">IKEA- und Systemmöbel</li>
+              <li data-i18n="service1Item3">Aufbau, Ausrichtung, Nachjustierung</li>
+            </ul>
+          </article>
+
+          <article class="card service-card">
+            <h3 data-i18n="service2Title">Küche & Montage</h3>
+            <ul>
+              <li data-i18n="service2Item1">Küchenmontage ohne Sanitär/Elektro</li>
+              <li data-i18n="service2Item2">Arbeitsplatten, Fronten, Blenden</li>
+              <li data-i18n="service2Item3">Montage von Zubehör und Beschlägen</li>
+            </ul>
+          </article>
+
+          <article class="card service-card">
+            <h3 data-i18n="service3Title">Bodenarbeiten</h3>
+            <ul>
+              <li data-i18n="service3Item1">Laminat, Klick-Vinyl, Fertigparkett</li>
+              <li data-i18n="service3Item2">Sockelleisten und Abschlüsse</li>
+              <li data-i18n="service3Item3">Saubere Verlegung in Wohnräumen</li>
+            </ul>
+          </article>
+
+          <article class="card service-card">
+            <h3 data-i18n="service4Title">Türen, Leisten, kleine Holzarbeiten</h3>
+            <ul>
+              <li data-i18n="service4Item1">Leisten montieren und anpassen</li>
+              <li data-i18n="service4Item2">Türen einstellen, Griffe wechseln</li>
+              <li data-i18n="service4Item3">Kleine Korrekturen und Nacharbeiten</li>
+            </ul>
+          </article>
+
+          <article class="card service-card">
+            <h3 data-i18n="service5Title">Garten & Außenbereich</h3>
+            <ul>
+              <li data-i18n="service5Item1">Rasen, Laub, Rückschnitt</li>
+              <li data-i18n="service5Item2">Aufräumen und einfache Außenarbeiten</li>
+              <li data-i18n="service5Item3">Saisonale Hilfe rund ums Haus</li>
+            </ul>
+          </article>
+
+          <article class="card service-card">
+            <h3 data-i18n="service6Title">Kleine Reparaturen</h3>
+            <ul>
+              <li data-i18n="service6Item1">Beschläge, Scharniere, Fronten</li>
+              <li data-i18n="service6Item2">Austausch defekter Kleinteile</li>
+              <li data-i18n="service6Item3">Praktische Lösungen im Alltag</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="notice-grid">
+          <article class="notice-card card">
+            <h3 data-i18n="pricingTitle">Preis</h3>
+            <p data-i18n="pricingStatement">Preis nach Aufwand. Vorab erhalten Sie eine transparente Einschätzung per Foto/Video oder vor Ort. Keine versteckten Kosten.</p>
+          </article>
+          <article class="notice-card card">
+            <h3 data-i18n="exclusionsTitle">Wichtiger Hinweis</h3>
+            <p data-i18n="exclusionsStatement">Elektro- und Sanitärarbeiten führen wir nicht selbst aus. Bei Bedarf koordinieren wir geprüfte Partnerbetriebe.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt reveal" id="process">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow" data-i18n="processEyebrow">So läuft es ab</p>
+          <h2 data-i18n="processTitle">Einfacher Ablauf in 5 Schritten</h2>
+        </div>
+        <div class="steps-grid">
+          <article class="step card"><span>1</span><h3 data-i18n="step1Title">Anfrage senden</h3><p data-i18n="step1Text">Schicken Sie Fotos, Video oder eine kurze Beschreibung per WhatsApp oder E-Mail.</p></article>
+          <article class="step card"><span>2</span><h3 data-i18n="step2Title">Einschätzung erhalten</h3><p data-i18n="step2Text">Sie bekommen eine ehrliche Einschätzung zum Aufwand und zum möglichen Termin.</p></article>
+          <article class="step card"><span>3</span><h3 data-i18n="step3Title">Termin abstimmen</h3><p data-i18n="step3Text">Wir vereinbaren einen passenden Termin und klären offene Details vorab.</p></article>
+          <article class="step card"><span>4</span><h3 data-i18n="step4Title">Saubere Ausführung</h3><p data-i18n="step4Text">Die Arbeiten werden ordentlich, pünktlich und mit klarem Fokus auf das Ergebnis umgesetzt.</p></article>
+          <article class="step card"><span>5</span><h3 data-i18n="step5Title">Abnahme & Feedback</h3><p data-i18n="step5Text">Sie prüfen das Ergebnis und können später eine Bewertung hinterlassen.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="portfolio">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow" data-i18n="portfolioEyebrow">Portfolio</p>
+          <h2 data-i18n="portfolioTitle">Beispielarbeiten nach Kategorien</h2>
+          <p data-i18n="portfolioIntro">Die Galerie nutzt Beispiel-Einträge aus einer JSON-Datei. Eigene Projekte können später einfach ergänzt werden.</p>
+        </div>
+
+        <div class="filter-bar" role="toolbar" aria-label="Portfolio Filter">
+          <button class="filter-btn active" data-filter="Alle" data-i18n="filterAll">Alle</button>
+          <button class="filter-btn" data-filter="Küche" data-i18n="filterKitchen">Küche</button>
+          <button class="filter-btn" data-filter="Möbel" data-i18n="filterFurniture">Möbel</button>
+          <button class="filter-btn" data-filter="Boden" data-i18n="filterFloor">Boden</button>
+          <button class="filter-btn" data-filter="Türen & Leisten" data-i18n="filterDoors">Türen & Leisten</button>
+          <button class="filter-btn" data-filter="Montage" data-i18n="filterAssembly">Montage</button>
+          <button class="filter-btn" data-filter="Garten" data-i18n="filterGarden">Garten</button>
+          <button class="filter-btn" data-filter="Reparaturen" data-i18n="filterRepairs">Reparaturen</button>
+        </div>
+
+        <div id="portfolioGrid" class="portfolio-grid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section alt reveal" id="reviews">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow" data-i18n="reviewsEyebrow">Bewertungen</p>
+          <h2 data-i18n="reviewsTitle">Platz für echte Kundenstimmen</h2>
+          <p data-i18n="reviewsIntro">Bis das Google-Unternehmensprofil aktiv ist, können hier Platzhalter oder später echte Bewertungen angezeigt werden.</p>
+        </div>
+
+        <div class="reviews-grid">
+          <article class="card review-card">
+            <div class="stars" aria-label="5 von 5 Sternen">★★★★★</div>
+            <p data-i18n="review1Text">„Schnelle Rückmeldung, sauber gearbeitet und fair kommuniziert.“</p>
+            <strong data-i18n="review1Name">Platzhalter – Krefeld</strong>
+          </article>
+          <article class="card review-card">
+            <div class="stars" aria-label="5 von 5 Sternen">★★★★★</div>
+            <p data-i18n="review2Text">„Termin eingehalten, Problem pragmatisch gelöst. Genau so soll es sein.“</p>
+            <strong data-i18n="review2Name">Platzhalter – Viersen</strong>
+          </article>
+          <article class="card review-card">
+            <div class="stars" aria-label="5 von 5 Sternen">★★★★★</div>
+            <p data-i18n="review3Text">„Freundlich, ordentlich, transparent. Würde ich wieder anfragen.“</p>
+            <strong data-i18n="review3Name">Platzhalter – Mönchengladbach</strong>
+          </article>
+        </div>
+
+        <div class="centered">
+          <a class="btn btn-secondary" href="https://example.com/google-business-profile" target="_blank" rel="noopener noreferrer" data-i18n="reviewsButton">Google-Bewertungen ansehen</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="faq">
+      <div class="container faq-layout">
+        <div class="section-head align-left">
+          <p class="eyebrow" data-i18n="faqEyebrow">FAQ</p>
+          <h2 data-i18n="faqTitle">Häufige Fragen</h2>
+          <p data-i18n="faqIntro">Kurz, ehrlich und ohne Marketing-Geschwätz.</p>
+        </div>
+
+        <div class="faq-list" id="faqList">
+          <details class="faq-item card">
+            <summary data-i18n="faq1Q">Welche Arbeiten übernehmen Sie?</summary>
+            <p data-i18n="faq1A">Vor allem Möbelmontage, Bodenarbeiten, Türen, Leisten, Küchenmontage ohne Elektro/Sanitär, Gartenhilfe und kleine Reparaturen.</p>
+          </details>
+          <details class="faq-item card">
+            <summary data-i18n="faq2Q">Wie bekomme ich eine Einschätzung?</summary>
+            <p data-i18n="faq2A">Am schnellsten per WhatsApp mit Fotos oder Video. Bei größeren Arbeiten ist auch ein Termin vor Ort möglich.</p>
+          </details>
+          <details class="faq-item card">
+            <summary data-i18n="faq3Q">Gibt es feste Preise?</summary>
+            <p data-i18n="faq3A">Nein. Der Preis richtet sich nach Aufwand, Material, Anfahrt und realem Umfang der Arbeit.</p>
+          </details>
+          <details class="faq-item card">
+            <summary data-i18n="faq4Q">In welchem Gebiet arbeiten Sie?</summary>
+            <p data-i18n="faq4A">Rund um Viersen, Krefeld, Mönchengladbach, Düsseldorf und etwa 50 km Umkreis. Weitere Strecken nach Absprache.</p>
+          </details>
+          <details class="faq-item card">
+            <summary data-i18n="faq5Q">Führen Sie Elektro- oder Sanitärarbeiten aus?</summary>
+            <p data-i18n="faq5A">Nicht selbst. Falls nötig, können wir dafür geprüfte Partnerbetriebe koordinieren.</p>
+          </details>
+          <details class="faq-item card">
+            <summary data-i18n="faq6Q">Wie schnell sind Termine möglich?</summary>
+            <p data-i18n="faq6A">Das hängt von Auslastung und Art der Arbeit ab. Kleine Aufträge sind oft kurzfristig planbar.</p>
+          </details>
+          <details class="faq-item card">
+            <summary data-i18n="faq7Q">Muss ich Material selbst besorgen?</summary>
+            <p data-i18n="faq7A">Je nach Auftrag. Wir können gemeinsam abstimmen, was sinnvoll ist und wer welches Material organisiert.</p>
+          </details>
+          <details class="faq-item card">
+            <summary data-i18n="faq8Q">Wie kann ich Kontakt aufnehmen?</summary>
+            <p data-i18n="faq8A">Per WhatsApp, Telefon oder E-Mail. WhatsApp ist für Fotos und schnelle Klärung meistens am praktischsten.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt reveal" id="contact">
+      <div class="container contact-grid">
+        <div>
+          <div class="section-head align-left">
+            <p class="eyebrow" data-i18n="contactEyebrow">Kontakt</p>
+            <h2 data-i18n="contactTitle">Schnell anfragen</h2>
+            <p data-i18n="contactIntro">Schicken Sie Fotos, Video oder eine kurze Beschreibung. So lässt sich der Aufwand am schnellsten einschätzen.</p>
+          </div>
+
+          <div class="contact-actions">
+            <a class="btn btn-primary" href="https://wa.me/491722821304" target="_blank" rel="noopener noreferrer" data-i18n="ctaWhatsapp">WhatsApp schreiben</a>
+            <a class="btn btn-secondary" href="tel:+491722821304" data-i18n="ctaCall">Anrufen</a>
+            <a class="btn btn-secondary" href="mailto:olehkuripko@gmail.com" data-i18n="ctaEmail">E-Mail senden</a>
+          </div>
+        </div>
+
+        <article class="card contact-card">
+          <dl>
+            <div>
+              <dt data-i18n="phoneLabel">Telefon & WhatsApp</dt>
+              <dd><a href="tel:+491722821304">+49 172 2821304</a></dd>
+            </div>
+            <div>
+              <dt data-i18n="emailLabel">E-Mail</dt>
+              <dd><a href="mailto:olehkuripko@gmail.com">olehkuripko@gmail.com</a></dd>
+            </div>
+            <div>
+              <dt data-i18n="hoursLabel">Arbeitszeiten</dt>
+              <dd data-i18n="workingHours">Mo–Sa: 08:00–19:00 · So: nach Absprache</dd>
+            </div>
+            <div>
+              <dt data-i18n="addressLabel">Adresse</dt>
+              <dd>Moerser Landstraße 204c, 47802 Krefeld, Deutschland</dd>
+            </div>
+            <div>
+              <dt data-i18n="areaLabel">Einsatzgebiet</dt>
+              <dd data-i18n="serviceArea">Viersen, Krefeld, Mönchengladbach, Düsseldorf + ca. 50 km Umkreis. Weitere Strecken nach Absprache.</dd>
+            </div>
+          </dl>
+          <a class="text-link" href="https://maps.google.com/?q=Moerser+Landstraße+204c,+47802+Krefeld,+Deutschland" target="_blank" rel="noopener noreferrer" data-i18n="mapsLink">In Google Maps öffnen</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section reveal legal-section" id="legal">
+      <div class="container legal-grid">
+        <article id="impressum" class="card legal-card">
+          <h2 data-i18n="legalTitle">Rechtliches</h2>
+          <h3 data-i18n="imprintTitle">Impressum</h3>
+          <p><strong data-i18n="legalBusinessLabel">Unternehmen:</strong> <span data-i18n="businessName">Oleg Kuripko (Einzelunternehmer)</span></p>
+          <p><strong data-i18n="addressLabel">Adresse:</strong> Moerser Landstraße 204c, 47802 Krefeld, Deutschland</p>
+          <p><strong data-i18n="phoneLabel">Telefon & WhatsApp:</strong> <a href="tel:+491722821304">+49 172 2821304</a></p>
+          <p><strong data-i18n="emailLabel">E-Mail:</strong> <a href="mailto:olehkuripko@gmail.com">olehkuripko@gmail.com</a></p>
+          <p data-i18n="imprintNote">Angaben nach § 5 TMG. Weitere Pflichtangaben können bei Bedarf ergänzt werden.</p>
+        </article>
+
+        <article id="privacy" class="card legal-card">
+          <h3 data-i18n="privacyTitle">Datenschutzerklärung</h3>
+          <p data-i18n="privacyP1">Diese Website ist eine statische Informationsseite ohne Kontaktformular, ohne Benutzerkonto, ohne Analyse-Tools und ohne Tracking-Cookies.</p>
+          <p data-i18n="privacyP2">Beim bloßen Besuch dieser Website werden durch uns keine personenbezogenen Daten aktiv zu Marketing- oder Analysezwecken verarbeitet.</p>
+          <p data-i18n="privacyP3">Der Hosting-Anbieter kann technisch notwendige Server-Logfiles verarbeiten. Als Hosting kann zum Beispiel GitHub Pages verwendet werden. Diese Angabe kann bei Bedarf angepasst werden.</p>
+          <p data-i18n="privacyP4">Externe Links zu WhatsApp, Google Maps oder einem späteren Google-Unternehmensprofil führen zu Diensten Dritter. Dort gelten die Datenschutzbestimmungen der jeweiligen Anbieter.</p>
+          <p data-i18n="privacyP5">Wenn Sie uns per Telefon, WhatsApp oder E-Mail kontaktieren, erfolgt die Verarbeitung Ihrer Angaben ausschließlich zur Bearbeitung Ihrer Anfrage.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Handwerker & Blitz</p>
+      <div class="footer-links">
+        <a href="#impressum" data-i18n="imprintTitle">Impressum</a>
+        <a href="#privacy" data-i18n="privacyTitle">Datenschutzerklärung</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal" id="portfolioModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-backdrop" data-close-modal="true"></div>
+    <div class="modal-dialog" role="document">
+      <button class="modal-close" id="modalClose" type="button" aria-label="Fenster schließen">×</button>
+      <div class="modal-content">
+        <div class="modal-header">
+          <p class="eyebrow" id="modalCategory"></p>
+          <h3 id="modalTitle"></h3>
+          <p id="modalMeta"></p>
+        </div>
+        <p id="modalDescription"></p>
+        <div class="modal-images">
+          <figure>
+            <img id="modalBefore" src="" alt="" />
+            <figcaption data-i18n="beforeLabel">Vorher</figcaption>
+          </figure>
+          <figure>
+            <img id="modalAfter" src="" alt="" />
+            <figcaption data-i18n="afterLabel">Nachher</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

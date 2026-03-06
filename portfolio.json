@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Tür gestrichen",
+    "category": "Türen & Leisten",
+    "city": "Krefeld",
+    "beforeImage": "images/portfolio/tueren-leisten-tuer-krefeld-01-before.jpg",
+    "afterImage": "images/portfolio/tueren-leisten-tuer-krefeld-02-after.jpg",
+    "description": {
+      "de": "Tür vorbereitet und sauber weiß gestrichen.",
+      "ru": "Дверь подготовлена и аккуратно покрашена в белый цвет.",
+      "en": "Door prepared and neatly painted white."
+    }
+  },
+  {
+    "title": "Treppenrenovierung",
+    "category": "Montage",
+    "city": "Krefeld",
+    "beforeImage": "images/portfolio/montage-treppe-renovierung-krefeld-01-before.jpg",
+    "afterImage": "images/portfolio/montage-treppe-renovierung-krefeld-07-after-overview.jpg",
+    "description": {
+      "de": "Treppenbereich renoviert und sauber aufgearbeitet.",
+      "ru": "Лестничная зона отремонтирована и аккуратно приведена в порядок.",
+      "en": "Stair area renovated and neatly refinished."
+    }
+  },
+  {
+    "title": "Zimmer renoviert",
+    "category": "Reparaturen",
+    "city": "Krefeld",
+    "beforeImage": "images/portfolio/reparaturen-zimmer-renovierung-krefeld-01-before.jpeg",
+    "afterImage": "images/portfolio/reparaturen-zimmer-renovierung-krefeld-07-after-overview.jpg",
+    "description": {
+      "de": "Zimmer renoviert, Wände aufgefrischt und der Raum sauber fertiggestellt.",
+      "ru": "Комната отремонтирована, стены приведены в порядок, помещение аккуратно завершено.",
+      "en": "Room renovated, walls refreshed and the space neatly finished."
+    }
+  },
+  {
+    "title": "Holzschuppen außen",
+    "category": "Garten",
+    "city": "Krefeld",
+    "beforeImage": "images/portfolio/garten-holzschuppen-krefeld-01-after.jpg",
+    "afterImage": "images/portfolio/garten-holzschuppen-krefeld-01-after.jpg",
+    "description": {
+      "de": "Außenansicht eines Holzschuppens oder Gartenprojekts.",
+      "ru": "Внешний вид деревянного сарая или садового проекта.",
+      "en": "Exterior view of a wooden shed or garden project."
+    }
+  }
+]
